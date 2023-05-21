@@ -23,7 +23,7 @@ const Item = require('../models/Item');
     // {name: 'Scenic2', imgUrl: 'https://www.instagram.com/p/Cj5yH2hOqIj/media/?size=l', category: categories[0]},
     // {name: 'Scenic3', imgUrl: 'https://www.instagram.com/p/CUoEAVosO_E/media/?size=l', category: categories[0]},
     {name: 'Jeep Grand Cherokee SRT (WK2)', src: '/GC_SRT_1.jpg', category: categories[5]},
-    {name: 'Ferrari 458 (widebody', src: '/458_1.jpg', category: categories[0]},
+    {name: 'Ferrari 458 (widebody)', src: '/458_1.jpg', category: categories[0]},
     {name: 'McLaren P1', src: '/P1_1.jpg', category: categories[2]},
     // {name: 'Taco', imgUrl: '🌮', category: categories[2]},
     // {name: 'Burrito', imgUrl: '🌯', category: categories[2]},

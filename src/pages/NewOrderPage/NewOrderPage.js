@@ -4,13 +4,13 @@ import * as ordersAPI from '../../utilities/orders-api';
 import styles from './NewOrderPage.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../components/Logo/Logo';
-import MenuList from '../../components/MenuList/MenuList';
+import CarList from '../../components/CarList/CarList';
 import CategoryList from '../../components/CategoryList/CategoryList';
 import OrderDetail from '../../components/OrderDetail/OrderDetail';
 import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export default function NewOrderPage({ user, setUser }) {
-  const [menuItems, setMenuItems] = useState([]);
+  const [carCards, setCarCards] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);
   const categoriesRef = useRef([]);
@@ -23,7 +23,7 @@ export default function NewOrderPage({ user, setUser }) {
         const cat = item.category.name;
         return cats.includes(cat) ? cats : [...cats, cat];
       }, []);
-      setMenuItems(items);
+      setCarCards(items);
       setActiveCat(categoriesRef.current[0]);
     }
     getItems();
@@ -65,8 +65,8 @@ export default function NewOrderPage({ user, setUser }) {
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
         <UserLogOut user={user} setUser={setUser} />
       </aside>
-      <MenuList
-        menuItems={menuItems.filter(item => item.category.name === activeCat)}
+      <CarList
+        carCards={carCards.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
       />
       <OrderDetail
